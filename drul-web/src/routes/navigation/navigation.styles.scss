@@ -46,7 +46,7 @@
   border: none;
   border-radius: 20px;
   margin-left: auto;
-  margin-right: 100px;
+  margin-right: 80px;
   cursor: pointer;
   font-family: $primary-font;
   font-weight: bold;
@@ -60,5 +60,6 @@
 
   &.active {
     background-color: lightgray;
+    cursor: default;
   }
 }
