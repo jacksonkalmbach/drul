@@ -8,8 +8,18 @@ const SignInForm = () => {
   return (
     <div className="sign-in-options">
       <form className="sign-in-form">
-        <input className="form-input" type="email" placeholder="Email" />
-        <input className="form-input" type="password" placeholder="Password" />
+        <input
+          required
+          className="form-input"
+          type="email"
+          placeholder="Email"
+        />
+        <input
+          required
+          className="form-input"
+          type="password"
+          placeholder="Password"
+        />
         <p className="forgot-password" onClick={handleForgotPassword}>
           Forgot Password?
         </p>

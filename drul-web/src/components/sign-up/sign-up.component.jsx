@@ -4,10 +4,26 @@ const SignUpForm = () => {
   return (
     <div className="sign-in-options">
       <form className="sign-in-form">
-        <input className="form-input" type="text" placeholder="Display Name" />
-        <input className="form-input" type="email" placeholder="Email" />
-        <input className="form-input" type="password" placeholder="Password" />
         <input
+          required
+          className="form-input"
+          type="text"
+          placeholder="Display Name"
+        />
+        <input
+          required
+          className="form-input"
+          type="email"
+          placeholder="Email"
+        />
+        <input
+          required
+          className="form-input"
+          type="password"
+          placeholder="Password"
+        />
+        <input
+          required
           className="form-input"
           type="password"
           placeholder="Confirm Password"
