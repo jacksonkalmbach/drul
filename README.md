@@ -1,2 +1,2 @@
 # DRÜL
-A social platform to share and discover bars and restuarants
+A social platform to share and discover bars and restuarants.
