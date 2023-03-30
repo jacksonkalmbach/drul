@@ -1,0 +1,64 @@
+@import "../../styles/variables";
+
+.navigation-container {
+  display: flex;
+  width: 100vw;
+  padding: 30px;
+}
+
+.logo {
+  text-decoration: none;
+  margin-right: 5rem;
+}
+
+.nav-links-container {
+  width: 40vw;
+  display: flex;
+  justify-content: flex-start;
+  gap: 3rem;
+  margin-left: 100px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-family: $secondary-font;
+  font-weight: none;
+
+  margin: 0 20px;
+  margin-bottom: 20px;
+
+  &:hover {
+    cursor: pointer;
+    color: gray;
+  }
+
+  &.active {
+    font-weight: 800;
+  }
+}
+
+.nav-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: 100px;
+  cursor: pointer;
+  font-family: $primary-font;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #0069d9;
+  }
+
+  &.active {
+    background-color: lightgray;
+  }
+}
