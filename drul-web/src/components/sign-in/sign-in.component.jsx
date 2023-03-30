@@ -1,17 +1,31 @@
 import "./sign-in.styles.scss";
 
 const SignInForm = () => {
+  const handleForgotPassword = () => {
+    alert("forgot password!");
+  };
+
   return (
     <div className="sign-in-options">
       <form className="sign-in-form">
-        <input className="form-input" placeholder="Email" />
-        <input className="form-input" placeholder="Password" />
-        <button>Login</button>
+        <input className="form-input" type="email" placeholder="Email" />
+        <input className="form-input" type="password" placeholder="Password" />
+        <p className="forgot-password" onClick={handleForgotPassword}>
+          Forgot Password?
+        </p>
+        <button>Sign Up</button>
       </form>
-      <p>OR</p>
       <div className="social-media-login">
-        <button>FB LOGIN</button>
-        <button>GOOG LOGIN</button>
+        <img
+          className="social-btn-login"
+          src="https://1.bp.blogspot.com/-E7Q8QGQi8jU/WImcvZPvYQI/AAAAAAAACTw/0Er2C5lpPrkRx_JMFTMU0ifRdjS3e4XJQCLcB/s1600/VEKTOR+ICON7.png"
+          alt="fb"
+        />
+        <img
+          className="social-btn-login"
+          src="https://www.shareicon.net/data/2016/07/10/119930_google_512x512.png"
+          alt="goog"
+        />
       </div>
     </div>
   );

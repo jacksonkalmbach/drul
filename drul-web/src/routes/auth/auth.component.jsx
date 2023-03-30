@@ -6,7 +6,6 @@ import "./auth.styles.scss";
 
 const Auth = () => {
   const [authChoice, setAuthChoice] = useState("signin");
-  console.log(authChoice);
 
   const toggleAuth = () => {
     setAuthChoice(authChoice === "signin" ? "signup" : "signin");
@@ -16,14 +15,19 @@ const Auth = () => {
     <div className="auth-container">
       <div className="app-preview">
         <h2>Coming soon to mobile!</h2>
+        <img
+          className="mobile-preview"
+          src="http://clipart-library.com/images_k/iphone-transparent-image/iphone-transparent-image-8.png"
+          alt="mobile-preview"
+        />
       </div>
       <div className="auth-options">
-        <h1 style={{ fontSize: "50px" }}>DRÜL</h1>
+        <h1 style={{ fontSize: "50px", marginBottom: "0" }}>DRÜL</h1>
         <div>
           {authChoice === "signin" ? (
-            <h1>Welcome Back</h1>
+            <h1 className="auth-subtitle">Welcome Back</h1>
           ) : (
-            <h1>Create Account</h1>
+            <h1 className="auth-subtitle">Create Account</h1>
           )}
         </div>
         <div className={`toggle-auth toggle-auth--${authChoice}`}>
