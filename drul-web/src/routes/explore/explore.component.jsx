@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import ExploreCard from "../../components/explore-card/explore-card.component";
 import FilterBar from "../../components/filter-bar/filter-bar.component";
@@ -17,6 +17,15 @@ const Explore = () => {
   const handleShuffle = () => {
     setIsShuffled(!isShuffled);
   };
+
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const children = containerRef.current.children;
+    for (let i = 0; i < children.length; i++) {
+      children[i].style.animationDelay = `${i * 0.1}s`;
+    }
+  }, [restuarants]);
 
   return (
     <div className="explore-container">
@@ -39,7 +48,7 @@ const Explore = () => {
             <span className="material-symbols-outlined">magic_button</span>
           </li>
         </ul>
-        <div className="filtered-loctaions-container">
+        <div className="filtered-loctaions-container" ref={containerRef}>
           {restuarants.map((restaurant) => (
             <ExploreCard key={restaurant.id} details={restaurant} />
           ))}
