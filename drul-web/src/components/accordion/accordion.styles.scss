@@ -36,16 +36,17 @@
 }
 
 .accordion-contents {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
 
   &.open {
+    transition: max-height 1s ease-in-out;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     max-width: 400px;
     max-height: 9999px;
     overflow-x: scroll;
-    overflow-y: hidden;
     padding: 15px;
   }
 }
