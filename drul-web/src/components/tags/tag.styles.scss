@@ -3,12 +3,15 @@
   background-color: #f6f6f6;
   border-radius: 15px;
   padding: 3px 10px;
+  min-width: fit-content;
 
-  &:hover {
-    cursor: pointer;
-  }
+  &.clickable {
+    &:hover {
+      cursor: pointer;
+    }
 
-  &.selected {
-    background-color: darkgray;
+    &.selected {
+      background-color: darkgray;
+    }
   }
 }

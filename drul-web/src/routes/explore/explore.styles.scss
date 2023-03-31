@@ -1,0 +1,18 @@
+.explore-container {
+  display: flex;
+  justify-content: center;
+}
+
+.filtered-loctaions-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  width: 65vw;
+  max-height: 70vh;
+  border: transparent;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  gap: 20px;
+  padding: 20px;
+  overflow-y: scroll;
+}

@@ -17,8 +17,8 @@ const Accordion = ({ title }) => {
 
   return (
     <>
-      <div className="accordion-container" onClick={handleSectionClick}>
-        <div className="accordion-section-header">
+      <div className="accordion-container">
+        <div className="accordion-section-header" onClick={handleSectionClick}>
           <div className="accordion-title">{title}</div>
           <span
             className={`material-symbols-rounded ${
@@ -31,7 +31,7 @@ const Accordion = ({ title }) => {
         <div className={`accordion-contents ${isOpen === true ? "open" : ""}`}>
           {cuisines.map((cuisine) => {
             const { id, name } = cuisine;
-            return <Tag key={id} name={name} />;
+            return <Tag key={id} name={name} clickable={true} />;
           })}
         </div>
       </div>

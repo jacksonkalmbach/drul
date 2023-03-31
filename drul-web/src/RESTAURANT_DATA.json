@@ -1,0 +1,129 @@
+{
+  "restuarants": [
+    {
+      "id": 1,
+      "name": "Mighty Quinn's Barbeque",
+      "address": "103 2nd Ave, New York, NY 10003",
+      "description": "Slow-smoked barbeque",
+      "cuisine": "🇺🇸 American",
+      "tags": [
+        {
+          "id": 1,
+          "name": "🍴 Casual Dining"
+        },
+        {
+          "id": 2,
+          "name": "🐶 Pet Friendly"
+        },
+        {
+          "id": 5,
+          "name": "👨‍👩‍👧‍👦 Family Friendly"
+        },
+        {
+          "id": 6,
+          "name": "💰 Budget Friendly"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Café Mogador",
+      "address": "101 St Marks Pl, New York, NY 10009",
+      "description": "Moroccan-inspired Mediterranean cuisine",
+      "cuisine": "🇲🇦 Moroccan",
+      "tags": [
+        {
+          "id": 1,
+          "name": "🍴 Casual Dining"
+        },
+        {
+          "id": 2,
+          "name": "🍷 Wine Lovers"
+        },
+        {
+          "id": 5,
+          "name": "👨‍👩‍👧‍👦 Family Friendly"
+        },
+        {
+          "id": 6,
+          "name": "🌱 Vegan & Vegetarian"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Momofuku Noodle Bar",
+      "address": "171 1st Avenue, New York, NY 10003",
+      "description": "Asian-inspired noodle dishes",
+      "cuisine": "🇯🇵 Japanese",
+      "tags": [
+        {
+          "id": 1,
+          "name": "🍴 Casual Dining"
+        },
+        {
+          "id": 2,
+          "name": "🚚 Food Trucks"
+        },
+        {
+          "id": 3,
+          "name": "🐶 Pet Friendly"
+        },
+        {
+          "id": 4,
+          "name": "🍜 Late Night Eats"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Taqueria St. Marks Place",
+      "address": "168 St Marks Pl, New York, NY 10009",
+      "description": "Authentic Mexican street food",
+      "cuisine": "🇲🇽 Mexican",
+      "tags": [
+        {
+          "id": 1,
+          "name": "🍴 Casual Dining"
+        },
+        {
+          "id": 2,
+          "name": "🍺 Craft Beer"
+        },
+        {
+          "id": 3,
+          "name": "🌮 Taco Tuesday"
+        },
+        {
+          "id": 4,
+          "name": "👨‍👩‍👧‍👦 Family Friendly"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Kafana",
+      "address": "116 Avenue C, New York, NY 10009",
+      "description": "Balkan comfort food",
+      "cuisine": "🇷🇸 Balkan",
+      "tags": [
+        {
+          "id": 1,
+          "name": "🍴 Casual Dining"
+        },
+        {
+          "id": 2,
+          "name": "🍺 Craft Beer"
+        },
+        {
+          "id": 3,
+          "name": "🌊 Waterfront Dining"
+        },
+        {
+          "id": 4,
+          "name": "👨‍👩‍👧‍👦 Family Friendly"
+        }
+      ]
+    }
+  ]
+}
