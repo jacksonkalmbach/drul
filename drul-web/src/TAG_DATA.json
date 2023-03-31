@@ -1,0 +1,174 @@
+{
+  "cuisines": [
+    {
+      "id": 1,
+      "name": "🇮🇹 Italian"
+    },
+    {
+      "id": 2,
+      "name": "🇯🇵 Japanese"
+    },
+    {
+      "id": 3,
+      "name": "🇺🇸 American"
+    },
+    {
+      "id": 4,
+      "name": "🇫🇷 French"
+    },
+    {
+      "id": 5,
+      "name": "🇲🇽 Mexican"
+    },
+    {
+      "id": 6,
+      "name": "🇨🇳 Chinese"
+    },
+    {
+      "id": 7,
+      "name": "🇬🇷 Greek"
+    },
+    {
+      "id": 8,
+      "name": "🇹🇭 Thai"
+    },
+    {
+      "id": 9,
+      "name": "🇮🇳 Indian"
+    },
+    {
+      "id": 10,
+      "name": "🇪🇸 Spanish"
+    },
+    {
+      "id": 11,
+      "name": "🇻🇳 Vietnamese"
+    },
+    {
+      "id": 12,
+      "name": "🇰🇷 Korean"
+    },
+    {
+      "id": 13,
+      "name": "🇧🇷 Brazilian"
+    },
+    {
+      "id": 14,
+      "name": "🇩🇪 German"
+    },
+    {
+      "id": 15,
+      "name": "🇲🇦 Moroccan"
+    },
+    {
+      "id": 16,
+      "name": "🇱🇧 Lebanese"
+    },
+    {
+      "id": 17,
+      "name": "🇹🇷 Turkish"
+    },
+    {
+      "id": 18,
+      "name": "🇨🇺 Cuban"
+    },
+    {
+      "id": 19,
+      "name": "🇯🇲 Jamaican"
+    },
+    {
+      "id": 20,
+      "name": "🇵🇪 Peruvian"
+    },
+    {
+      "id": 21,
+      "name": "🇦🇷 Argentine"
+    },
+    {
+      "id": 22,
+      "name": "🇬🇧 British"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "🔥 Trending"
+    },
+    {
+      "id": 2,
+      "name": "🍷 Wine Lovers"
+    },
+    {
+      "id": 3,
+      "name": "👩‍❤️‍👨 Date Night"
+    },
+    {
+      "id": 4,
+      "name": "🤩 Popular"
+    },
+    {
+      "id": 5,
+      "name": "👨‍👩‍👧‍👦 Family Friendly"
+    },
+    {
+      "id": 6,
+      "name": "🌱 Vegan & Vegetarian"
+    },
+    {
+      "id": 7,
+      "name": "🍹 Cocktail Bars"
+    },
+    {
+      "id": 8,
+      "name": "☕️ Coffee & Tea"
+    },
+    {
+      "id": 9,
+      "name": "🍳 Brunch Spots"
+    },
+    {
+      "id": 10,
+      "name": "🍰 Dessert Lovers"
+    },
+    {
+      "id": 11,
+      "name": "🍽️ Fine Dining"
+    },
+    {
+      "id": 12,
+      "name": "💰 Budget Friendly"
+    },
+    {
+      "id": 13,
+      "name": "🍺 Craft Beer"
+    },
+    {
+      "id": 14,
+      "name": "🍕 Pizza Places"
+    },
+    {
+      "id": 15,
+      "name": "🚚 Food Trucks"
+    },
+    {
+      "id": 16,
+      "name": "🐶 Pet Friendly"
+    },
+    {
+      "id": 17,
+      "name": "🌊 Waterfront Dining"
+    },
+    {
+      "id": 18,
+      "name": "🏙️ Rooftop Bars"
+    },
+    {
+      "id": 19,
+      "name": "🎶 Live Music"
+    },
+    {
+      "id": 20,
+      "name": "🍜 Late Night Eats"
+    }
+  ]
+}

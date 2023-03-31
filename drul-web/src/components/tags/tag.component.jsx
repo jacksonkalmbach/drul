@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./tag.styles.scss";
 
-const Tag = ({ cuisineType }) => {
+const Tag = ({ name }) => {
   const [selected, setSelected] = useState(false);
 
   const handleSelect = () => {
@@ -14,7 +14,7 @@ const Tag = ({ cuisineType }) => {
       className={`tag-container ${selected ? "selected" : ""}`}
       onClick={handleSelect}
     >
-      {cuisineType}
+      {name}
     </div>
   );
 };

@@ -1,16 +1,30 @@
 .filter-bar-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: 50px;
 }
 
 .filter-bar {
-  width: 90vw;
-  height: 50px;
+  width: 20vw;
+  height: 80vh;
   border: 1px solid lightgray;
   border-radius: 25px;
   background-color: rgb(252, 252, 252);
 
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+
+  overflow: scroll;
+}
+
+.cuisine-type-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  height: 200px;
+  // white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }

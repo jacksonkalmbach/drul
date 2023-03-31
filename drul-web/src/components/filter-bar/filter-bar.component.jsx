@@ -1,41 +1,29 @@
 import Tag from "../tags/tag.component";
 import "./filter-bar.styles.scss";
 
-const cuisines = [
-  "🇮🇹 Italian",
-  "🇯🇵 Japanese",
-  "🇺🇸 American",
-  "🇫🇷 French",
-  "🇲🇽 Mexican",
-  "🇨🇳 Chinese",
-  "🇬🇷 Greek",
-  "🇹🇭 Thai",
-];
-
-// const tags = [
-//   {
-//     1: "🔥 Trending",
-//   },
-//   {
-//     2: "🍷 Wine Lovers",
-//   },
-//   {
-//     3: "👩‍❤️‍👨 Date Night",
-//   },
-// ];
+import TAG_DATA from "../../TAG_DATA.json";
 
 const FilterBar = () => {
+  const { cuisines, tags } = TAG_DATA;
+
   return (
-    <div className="filter-bar-container">
-      <div className="filter-bar">
-        <>Filter</>
-        <input placeholder="Search by Category" />
-        {cuisines.map((cuisine) => (
-          <Tag cuisineType={cuisine} />
-        ))}
-        <button>Add Tags</button>
+    <>
+      <div className="filter-bar-container">
+        <div className="filter-bar">
+          <div className="cuisine-type-container">
+            {cuisines.map((cuisine) => {
+              const { id, name } = cuisine;
+              return <Tag key={id} name={name} />;
+            })}
+          </div>
+          <input placeholder="Search by Category" />
+          {tags.map((tag) => {
+            const { id, name } = tag;
+            return <Tag key={id} name={name} />;
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
