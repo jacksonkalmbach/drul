@@ -10,7 +10,6 @@ import Tag from "../../components/tags/tag.component";
 
 const Explore = () => {
   const { restuarants } = RESTAURANT_DATA;
-  const { tags } = restuarants;
   const sampleTag = restuarants[0].tags[0].name;
 
   const [isShuffled, setIsShuffled] = useState(false);
