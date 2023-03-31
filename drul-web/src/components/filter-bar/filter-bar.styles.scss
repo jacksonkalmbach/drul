@@ -1,0 +1,16 @@
+.filter-bar-container {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-bar {
+  width: 90vw;
+  height: 50px;
+  border: 1px solid lightgray;
+  border-radius: 25px;
+  background-color: rgb(252, 252, 252);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

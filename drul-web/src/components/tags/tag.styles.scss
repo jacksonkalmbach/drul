@@ -1,0 +1,14 @@
+.tag-container {
+  border: transparent;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  padding: 3px 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.selected {
+    background-color: darkgray;
+  }
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SignInForm from "../../components/sign-in/sign-in.component";
 import SignUpForm from "../../components/sign-up/sign-up.component";
+import mobilePreview from "../../assets/mobile-preview.png";
 
 import "./auth.styles.scss";
 
@@ -17,7 +18,7 @@ const Auth = () => {
         <h2>Coming soon to mobile!</h2>
         <img
           className="mobile-preview"
-          src="http://clipart-library.com/images_k/iphone-transparent-image/iphone-transparent-image-8.png"
+          src={mobilePreview}
           alt="mobile-preview"
         />
       </div>

@@ -1,6 +1,8 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import "./navigation.styles.scss";
 
+import logo from "../../assets/logo.png";
+
 const Navigation = () => {
   const { pathname } = useLocation();
 
@@ -8,7 +10,7 @@ const Navigation = () => {
     <>
       <div className="navigation-container">
         <Link className={`logo ${pathname === "/" ? "active" : ""}`} to="/">
-          LOGO
+          <img className="logo-png" src={logo} alt="logo" />
         </Link>
         <div className="nav-links-container">
           <Link

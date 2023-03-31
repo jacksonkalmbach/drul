@@ -4,19 +4,28 @@
   display: flex;
   width: 100vw;
   padding: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
   text-decoration: none;
-  margin-right: 5rem;
+  margin-right: 0;
+}
+
+.logo-png {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links-container {
-  width: 40vw;
   display: flex;
   justify-content: flex-start;
-  gap: 3rem;
-  margin-left: 100px;
+  align-items: center;
+  gap: 4rem;
+  width: 40vw;
+  margin-left: 4rem;
 }
 
 .nav-link {
@@ -24,9 +33,6 @@
   color: black;
   font-family: $secondary-font;
   font-weight: none;
-
-  margin: 0 20px;
-  margin-bottom: 20px;
 
   &:hover {
     cursor: pointer;
