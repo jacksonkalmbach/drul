@@ -1,9 +1,11 @@
 .tag-container {
+  display: flex;
   border: transparent;
   background-color: #f6f6f6;
   border-radius: 15px;
   padding: 3px 10px;
   min-width: fit-content;
+  align-items: center;
 
   &.clickable {
     &:hover {
@@ -13,5 +15,14 @@
     &.selected {
       background-color: darkgray;
     }
+  }
+}
+
+.material-symbols-rounded {
+  color: #cfcfcf;
+  margin-left: 4px;
+
+  &:hover {
+    cursor: pointer;
   }
 }

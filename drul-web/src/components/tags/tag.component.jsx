@@ -1,8 +1,7 @@
 import { useState } from "react";
-
 import "./tag.styles.scss";
 
-const Tag = ({ name, clickable }) => {
+const Tag = ({ name, clickable, removable }) => {
   const [selected, setSelected] = useState(false);
 
   const handleSelect = () => {
@@ -16,7 +15,13 @@ const Tag = ({ name, clickable }) => {
       }`}
       onClick={clickable ? handleSelect : null}
     >
-      {name}
+      {removable ? (
+        <>
+          {name} <span className="material-symbols-rounded">close</span>
+        </>
+      ) : (
+        <>{name}</>
+      )}
     </div>
   );
 };

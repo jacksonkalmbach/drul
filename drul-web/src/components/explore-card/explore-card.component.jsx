@@ -1,4 +1,5 @@
 import Tag from "../tags/tag.component";
+import { Link } from "react-router-dom";
 import "./explore-card.styles.scss";
 
 const ExploreCard = ({ details }) => {
@@ -7,7 +8,16 @@ const ExploreCard = ({ details }) => {
   return (
     <div className="explore-card-container">
       <h3>{name}</h3>
-      <p>{address}</p>
+      <>
+        📍
+        <Link
+          className="address-link"
+          to="https://www.google.com/maps"
+          target="_blank"
+        >
+          {address}
+        </Link>
+      </>
       <p>{description}</p>
       <p>{cuisine}</p>
       <p style={{ fontWeight: "bold" }}>Location Tags</p>

@@ -16,12 +16,16 @@
   max-height: 50px;
 }
 
-::-webkit-scrollbar {
+.address-link {
+  color: rgb(133, 201, 224);
+  font-size: 13px;
+}
+
+.explore-card-tags-container::-webkit-scrollbar {
   display: none;
 }
 
-/* Show the scrollbar on hover */
-.filter-bar-container:hover::-webkit-scrollbar {
+.explore-card-tags-container:hover::-webkit-scrollbar {
   display: block;
   width: 5px;
   height: 5px;
@@ -29,8 +33,7 @@
   border-radius: 5px;
 }
 
-/* Style the scrollbar thumb */
-.filter-bar-container:hover::-webkit-scrollbar-thumb {
+.explore-card-tags-container:hover::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 5px;
 }
