@@ -1,5 +1,14 @@
+import Map from "../../components/map/map.component";
+
 const Home = () => {
-  return <>HOME</>;
+  return (
+    <>
+      HOME
+      <div>
+        <Map />
+      </div>
+    </>
+  );
 };
 
 export default Home;

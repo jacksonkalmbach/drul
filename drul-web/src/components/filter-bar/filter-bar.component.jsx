@@ -5,8 +5,6 @@ import DUMMY_DATA from "../../TAG_DATA.json";
 
 const FilterBar = () => {
   const { cuisines, tags } = DUMMY_DATA;
-  console.log(cuisines);
-  console.log(tags);
 
   return (
     <>
