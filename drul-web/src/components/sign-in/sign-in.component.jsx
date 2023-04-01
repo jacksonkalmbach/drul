@@ -1,3 +1,4 @@
+import { signInWithGooglePopup } from "../../utils/firebase.utils";
 import "./sign-in.styles.scss";
 
 const SignInForm = () => {
@@ -35,6 +36,7 @@ const SignInForm = () => {
           className="social-btn-login"
           src="https://www.shareicon.net/data/2016/07/10/119930_google_512x512.png"
           alt="goog"
+          onClick={signInWithGooglePopup}
         />
       </div>
     </div>

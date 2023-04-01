@@ -1,14 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import "./accordion.styles.scss";
 
-import DUMMY_DATA from "../../TAG_DATA.json";
 import Tag from "../tags/tag.component";
 
-const Accordion = ({ title }) => {
-  const { cuisines } = DUMMY_DATA;
-  // console.log(cuisines);
-
+const Accordion = ({ title, data }) => {
+  console.log("PROP DATA", data);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSectionClick = () => {
@@ -28,12 +25,12 @@ const Accordion = ({ title }) => {
             expand_more
           </span>
         </div>
-        <div className={`accordion-contents ${isOpen === true ? "open" : ""}`}>
-          {cuisines.map((cuisine) => {
-            const { id, name } = cuisine;
+        {/* <div className={`accordion-contents ${isOpen === true ? "open" : ""}`}>
+          {data.map((d) => {
+            const { id, name } = d;
             return <Tag key={id} name={name} clickable={true} />;
           })}
-        </div>
+        </div> */}
       </div>
     </>
   );
