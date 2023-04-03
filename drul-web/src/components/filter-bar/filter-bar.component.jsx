@@ -15,7 +15,7 @@ const FilterBar = () => {
       setCuisines(DUMMY_DATA.cuisines);
       setTags(DUMMY_DATA.tags);
     }
-  }, [DUMMY_DATA]);
+  }, []);
 
   return (
     <>

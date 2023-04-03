@@ -9,14 +9,12 @@ import "./accordion.styles.scss";
 import Tag from "../tags/tag.component";
 
 const Accordion = ({ title, filterOptions }) => {
-  console.log("FILTER_OPTIONS", filterOptions);
   const [options, setOptions] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     if (filterOptions) {
       setOptions(filterOptions);
-      console.log("FILTERS_STATE", options);
     }
   }, [filterOptions]);
 
@@ -40,7 +38,7 @@ const Accordion = ({ title, filterOptions }) => {
         <div className={`accordion-contents ${isOpen === true ? "open" : ""}`}>
           {options.map((option) => {
             const { id, name } = option;
-            return <Tag key={id} name={name} clickable={true} />;
+            return <Tag key={id} id={id} name={name} clickable={true} />;
           })}
         </div>
       </div>

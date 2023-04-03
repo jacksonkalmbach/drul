@@ -19,8 +19,6 @@ const Navigation = () => {
     navigate("login");
   };
 
-  console.log("LOGIN_STATUS_NAV", loginStatus);
-
   return (
     <>
       <div className="navigation-container">
