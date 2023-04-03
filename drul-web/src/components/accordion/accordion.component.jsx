@@ -1,12 +1,24 @@
 import { useState, useEffect, useRef } from "react";
+import {
+  addCuisineType,
+  removeCuisineType,
+} from "../../store/reducers/explore/exploreCuisinesSlice";
 
 import "./accordion.styles.scss";
 
 import Tag from "../tags/tag.component";
 
-const Accordion = ({ title, data }) => {
-  console.log("PROP DATA", data);
+const Accordion = ({ title, filterOptions }) => {
+  console.log("FILTER_OPTIONS", filterOptions);
+  const [options, setOptions] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (filterOptions) {
+      setOptions(filterOptions);
+      console.log("FILTERS_STATE", options);
+    }
+  }, [filterOptions]);
 
   const handleSectionClick = () => {
     setIsOpen(!isOpen);
@@ -25,12 +37,12 @@ const Accordion = ({ title, data }) => {
             expand_more
           </span>
         </div>
-        {/* <div className={`accordion-contents ${isOpen === true ? "open" : ""}`}>
-          {data.map((d) => {
-            const { id, name } = d;
+        <div className={`accordion-contents ${isOpen === true ? "open" : ""}`}>
+          {options.map((option) => {
+            const { id, name } = option;
             return <Tag key={id} name={name} clickable={true} />;
           })}
-        </div> */}
+        </div>
       </div>
     </>
   );

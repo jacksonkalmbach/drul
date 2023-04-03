@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import "./tag.styles.scss";
 
 const Tag = ({ name, clickable, removable }) => {

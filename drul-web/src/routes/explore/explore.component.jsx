@@ -2,6 +2,11 @@ import { useState, useEffect, useRef } from "react";
 
 import ExploreCard from "../../components/explore-card/explore-card.component";
 import FilterBar from "../../components/filter-bar/filter-bar.component";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addCuisineType,
+  removeCuisineType,
+} from "../../store/reducers/explore/exploreCuisinesSlice";
 
 import "./explore.styles.scss";
 
@@ -9,6 +14,10 @@ import RESTAURANT_DATA from "../../RESTAURANT_DATA.json";
 import Tag from "../../components/tags/tag.component";
 
 const Explore = () => {
+  const dispatch = useDispatch();
+  const cuisineFilters = useSelector((state) => state.exploreCuisine.cuisines);
+  console.log("CUS_FILTERS", cuisineFilters);
+
   const { restuarants } = RESTAURANT_DATA;
   const sampleTag = restuarants[0].tags[0].name;
 
