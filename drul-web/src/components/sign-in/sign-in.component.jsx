@@ -1,9 +1,21 @@
 import { signInWithGooglePopup } from "../../utils/firebase.utils";
+import { useSelector, useDispatch } from "react-redux";
+import { login } from "../../store/reducers/users/userAuthSlice";
+
 import "./sign-in.styles.scss";
 
 const SignInForm = () => {
+  const dispatch = useDispatch();
+  const loginStatus = useSelector((state) => state.userAuth.value);
+
+  console.log("LOGIN_STATUS", loginStatus);
   const handleForgotPassword = () => {
     alert("forgot password!");
+  };
+
+  const handleGoogleSignIn = async () => {
+    await signInWithGooglePopup();
+    dispatch(login());
   };
 
   return (
@@ -36,7 +48,7 @@ const SignInForm = () => {
           className="social-btn-login"
           src="https://www.shareicon.net/data/2016/07/10/119930_google_512x512.png"
           alt="goog"
-          onClick={signInWithGooglePopup}
+          onClick={handleGoogleSignIn}
         />
       </div>
     </div>
