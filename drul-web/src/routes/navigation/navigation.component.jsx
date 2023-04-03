@@ -40,7 +40,7 @@ const Navigation = () => {
           </Link>
         </div>
         {loginStatus ? (
-          <Link className="nav-link" onClick={handleLogOut}>
+          <Link className="nav-button loggedin" onClick={handleLogOut}>
             Logout
           </Link>
         ) : (
