@@ -1,21 +1,24 @@
 import { signInWithGooglePopup } from "../../utils/firebase.utils";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 import { login } from "../../store/reducers/users/userAuthSlice";
 
 import "./sign-in.styles.scss";
 
 const SignInForm = () => {
   const dispatch = useDispatch();
-  const loginStatus = useSelector((state) => state.userAuth.value);
+  const navigate = useNavigate();
 
-  console.log("LOGIN_STATUS", loginStatus);
   const handleForgotPassword = () => {
     alert("forgot password!");
   };
 
   const handleGoogleSignIn = async () => {
-    await signInWithGooglePopup();
+    const user = await signInWithGooglePopup();
+    const uid = user.user.uid;
     dispatch(login());
+    navigate(`/explore/${uid}`);
   };
 
   return (

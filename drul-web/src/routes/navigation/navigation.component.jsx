@@ -1,10 +1,25 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../store/reducers/users/userAuthSlice";
+
 import "./navigation.styles.scss";
 
 import logo from "../../assets/logo.png";
+import { signOutUser } from "../../utils/firebase.utils";
 
 const Navigation = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const loginStatus = useSelector((state) => state.userAuth.value);
+
+  const handleLogOut = async () => {
+    await signOutUser();
+    dispatch(logout());
+    navigate("login");
+  };
+
+  console.log("LOGIN_STATUS_NAV", loginStatus);
 
   return (
     <>
@@ -26,12 +41,18 @@ const Navigation = () => {
             About
           </Link>
         </div>
-        <Link
-          className={`nav-button ${pathname === "/login" ? "active" : ""}`}
-          to="/login"
-        >
-          Login
-        </Link>
+        {loginStatus ? (
+          <Link className="nav-link" onClick={handleLogOut}>
+            Logout
+          </Link>
+        ) : (
+          <Link
+            className={`nav-button ${pathname === "/login" ? "active" : ""}`}
+            to="/login"
+          >
+            Login
+          </Link>
+        )}
       </div>
       <Outlet />
     </>
