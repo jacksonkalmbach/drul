@@ -1,14 +1,22 @@
-import Tag from "../tags/tag.component";
-import { Link } from "react-router-dom";
-import "./explore-card.styles.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+import Tag from "../tags/tag.component";
+
+import "./explore-card.styles.scss";
 
 const ExploreCard = ({ details }) => {
   const { name, address, description, cuisine, tags } = details;
   const [saveRestuarant, setSaveRestuarant] = useState(false);
+  const isLoggedInUser = useSelector((state) => state.userAuth.value);
 
   const handleSaveRestaurant = () => {
-    setSaveRestuarant(!saveRestuarant);
+    if (isLoggedInUser) {
+      setSaveRestuarant(!saveRestuarant);
+    } else {
+      alert("Sign In to bookmark restaurants");
+    }
   };
 
   return (
@@ -19,7 +27,7 @@ const ExploreCard = ({ details }) => {
           className={`save-icon ${saveRestuarant ? "saved" : ""}`}
           onClick={handleSaveRestaurant}
         >
-          <span class="material-symbols-outlined">bookmark</span>
+          <span className="material-symbols-outlined">bookmark</span>
         </div>
       </div>
       <>
