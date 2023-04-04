@@ -15,6 +15,15 @@ const SelectedFilters = () => {
   const [selectedLocationsTag, setSelectedLocationsTag] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
   const [isShuffled, setIsShuffled] = useState(false);
+  const clearRestaurants = useSelector(
+    (state) => state.exploreOptions.clearTag
+  );
+
+  useEffect(() => {
+    if (clearRestaurants) {
+      setSearchResults([]);
+    }
+  }, [clearRestaurants]);
 
   const shuffle = (array) => {
     const random = Math.floor(Math.random() * array.length);

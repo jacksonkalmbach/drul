@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import {
   addCuisine,
   removeCuisine,
@@ -7,6 +7,8 @@ import {
   removeTag,
   addLocation,
   removeLocation,
+  clearFilters,
+  clearTag,
 } from "../../store/reducers/explore/exploreOptionsSlice";
 
 import Accordion from "../accordion/accordion.component";
@@ -18,6 +20,15 @@ const FilterBar = () => {
   const [cuisines, setCuisines] = useState([]);
   const [tags, setTags] = useState([]);
   const [locations, setLocations] = useState([]);
+  const dispatch = useDispatch();
+
+  const handleClearFilters = () => {
+    dispatch(clearTag(true));
+    dispatch(clearFilters());
+    setTimeout(() => {
+      dispatch(clearTag(false));
+    }, 500);
+  };
 
   useEffect(() => {
     if (DUMMY_DATA) {
@@ -32,6 +43,15 @@ const FilterBar = () => {
   return (
     <>
       <div className="filter-bar-container">
+        {Object.keys(exploreOptions.exploreOptions.cuisines).length > 0 ||
+        Object.keys(exploreOptions.exploreOptions.locations).length > 0 ||
+        Object.keys(exploreOptions.exploreOptions.tags).length > 0 ? (
+          <button className="clear-filters-btn" onClick={handleClearFilters}>
+            Clear Filters
+          </button>
+        ) : (
+          <button className="clear-filters-btn dormant">Clear Filters</button>
+        )}
         <Accordion
           title="Cuisine"
           filterOptions={cuisines}

@@ -6,6 +6,7 @@ const initialState = {
     tags: {},
     locations: {},
   },
+  clearTag: false,
 };
 
 export const exploreOptionsSlice = createSlice({
@@ -36,6 +37,16 @@ export const exploreOptionsSlice = createSlice({
       const id = action.payload;
       delete state.exploreOptions.locations[id];
     },
+    clearFilters: (state) => {
+      state.exploreOptions = {
+        cuisines: {},
+        tags: {},
+        locations: {},
+      };
+    },
+    clearTag: (state, action) => {
+      state.clearTag = action.payload;
+    },
   },
 });
 
@@ -46,6 +57,8 @@ export const {
   removeTag,
   addLocation,
   removeLocation,
+  clearFilters,
+  clearTag,
 } = exploreOptionsSlice.actions;
 
 export default exploreOptionsSlice.reducer;
