@@ -129,6 +129,110 @@
           "name": "👨‍👩‍👧‍👦 Family Friendly"
         }
       ]
+    },
+    {
+      "id": 6,
+      "name": "Eleven Madison Park",
+      "address": "11 Madison Ave, New York, NY 10010",
+      "location": "Flatiron",
+      "description": "Contemporary American fine dining",
+      "cuisine": "🇺🇸 American",
+      "tags": [
+        {
+          "id": 11,
+          "name": "🍽️ Fine Dining"
+        },
+        {
+          "id": 12,
+          "name": "💰 Budget Friendly"
+        },
+        {
+          "id": 13,
+          "name": "🍺 Craft Beer"
+        },
+        {
+          "id": 18,
+          "name": "🏙️ Rooftop Bars"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Roberta's Pizza",
+      "address": "261 Moore St, Brooklyn, NY 11206",
+      "location": "Bushwick",
+      "description": "Neapolitan-style pizza and Italian-inspired dishes",
+      "cuisine": "🇮🇹 Italian",
+      "tags": [
+        {
+          "id": 6,
+          "name": "🌱 Vegan & Vegetarian"
+        },
+        {
+          "id": 12,
+          "name": "💰 Budget Friendly"
+        },
+        {
+          "id": 13,
+          "name": "🍺 Craft Beer"
+        },
+        {
+          "id": 15,
+          "name": "🚚 Food Trucks"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Llama Inn",
+      "address": "50 Withers St, Brooklyn, NY 11211",
+      "location": "Williamsburg",
+      "description": "Peruvian-inspired dishes and cocktails",
+      "cuisine": "🇵🇪 Peruvian",
+      "tags": [
+        {
+          "id": 11,
+          "name": "🍽️ Fine Dining"
+        },
+        {
+          "id": 13,
+          "name": "🍺 Craft Beer"
+        },
+        {
+          "id": 17,
+          "name": "🌊 Waterfront Dining"
+        },
+        {
+          "id": 20,
+          "name": "🍜 Late Night Eats"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Lucali",
+      "address": "575 Henry St, Brooklyn, NY 11231",
+      "location": "Carroll Gardens",
+      "description": "Neapolitan-style pizza and calzones",
+      "cuisine": "🇮🇹 Italian",
+      "tags": [
+        {
+          "id": 11,
+          "name": "🍽️ Fine Dining"
+        },
+        {
+          "id": 12,
+          "name": "💰 Budget Friendly"
+        },
+        {
+          "id": 14,
+          "name": "🍕 Pizza Places"
+        },
+        {
+          "id": 15,
+          "name": "🚚 Food Trucks"
+        }
+      ]
     }
   ]
 }
