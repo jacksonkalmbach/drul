@@ -5,6 +5,8 @@ import {
   removeCuisine,
   addTag,
   removeTag,
+  addLocation,
+  removeLocation,
 } from "../../store/reducers/explore/exploreOptionsSlice";
 
 import Accordion from "../accordion/accordion.component";
@@ -15,11 +17,13 @@ import DUMMY_DATA from "../../TAG_DATA.json";
 const FilterBar = () => {
   const [cuisines, setCuisines] = useState([]);
   const [tags, setTags] = useState([]);
+  const [locations, setLocations] = useState([]);
 
   useEffect(() => {
     if (DUMMY_DATA) {
       setCuisines(DUMMY_DATA.cuisines);
       setTags(DUMMY_DATA.tags);
+      setLocations(DUMMY_DATA.locations);
     }
   }, []);
 
@@ -35,8 +39,18 @@ const FilterBar = () => {
           add={addCuisine}
           remove={removeCuisine}
         />
-        <Accordion title="Tags" filterOptions={tags} />
-        <Accordion title="Location" />
+        <Accordion
+          title="Tags"
+          filterOptions={tags}
+          add={addTag}
+          remove={removeTag}
+        />
+        <Accordion
+          title="Location"
+          filterOptions={locations}
+          add={addLocation}
+          remove={removeLocation}
+        />
       </div>
     </>
   );
