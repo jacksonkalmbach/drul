@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userAuthReducer from "../store/reducers/users/userAuthSlice";
-import cuisineFilterReducer from "./reducers/explore/exploreCuisinesSlice";
+import exploreOptionsReducer from "./reducers/explore/exploreOptionsSlice";
 
 const store = configureStore({
   reducer: {
     userAuth: userAuthReducer,
-    exploreCuisine: cuisineFilterReducer,
+    exploreOptions: exploreOptionsReducer,
   },
 });
 

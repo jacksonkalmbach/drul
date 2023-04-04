@@ -1,25 +1,25 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import {
-  addCuisineType,
-  removeCuisineType,
-} from "../../store/reducers/explore/exploreCuisinesSlice";
-
 import "./tag.styles.scss";
 
-const Tag = ({ id, name, clickable, removable }) => {
+const Tag = ({ id, name, clickable, removable, add, remove }) => {
   const [selected, setSelected] = useState(false);
-
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleSelect = () => {
-    setSelected(!selected);
-    // if (selected) {
-    //   dispatch(addCuisineType({ id, name }));
-    // } else {
-    //   dispatch(removeCuisineType(id));
-    // }
+    if (!selected) {
+      setSelected(true);
+      dispatch(add({ id, name }));
+    } else {
+      dispatch(remove(id));
+      setSelected(false);
+    }
+  };
+
+  const handleRemove = () => {
+    dispatch(remove(id));
+    setSelected(false);
   };
 
   return (
@@ -32,7 +32,7 @@ const Tag = ({ id, name, clickable, removable }) => {
       {removable ? (
         <>
           {name}{" "}
-          <span className="material-symbols-rounded" onClick={handleSelect}>
+          <span className="material-symbols-rounded" onClick={handleRemove}>
             close
           </span>
         </>

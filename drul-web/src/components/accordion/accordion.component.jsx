@@ -1,14 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import {
-  addCuisineType,
-  removeCuisineType,
-} from "../../store/reducers/explore/exploreCuisinesSlice";
 
 import "./accordion.styles.scss";
 
 import Tag from "../tags/tag.component";
 
-const Accordion = ({ title, filterOptions }) => {
+const Accordion = ({ title, filterOptions, add, remove }) => {
   const [options, setOptions] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -38,7 +34,16 @@ const Accordion = ({ title, filterOptions }) => {
         <div className={`accordion-contents ${isOpen === true ? "open" : ""}`}>
           {options.map((option) => {
             const { id, name } = option;
-            return <Tag key={id} id={id} name={name} clickable={true} />;
+            return (
+              <Tag
+                key={id}
+                id={id}
+                name={name}
+                clickable={true}
+                add={add}
+                remove={remove}
+              />
+            );
           })}
         </div>
       </div>

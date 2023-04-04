@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
-// import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import {
+  addCuisine,
+  removeCuisine,
+  addTag,
+  removeTag,
+} from "../../store/reducers/explore/exploreOptionsSlice";
 
 import Accordion from "../accordion/accordion.component";
 import "./filter-bar.styles.scss";
@@ -17,10 +23,18 @@ const FilterBar = () => {
     }
   }, []);
 
+  const exploreOptions = useSelector((state) => state.exploreOptions);
+  console.log("SF_STATE_FILTER_BAR", exploreOptions);
+
   return (
     <>
       <div className="filter-bar-container">
-        <Accordion title="Cuisine" filterOptions={cuisines} />
+        <Accordion
+          title="Cuisine"
+          filterOptions={cuisines}
+          add={addCuisine}
+          remove={removeCuisine}
+        />
         <Accordion title="Tags" filterOptions={tags} />
         <Accordion title="Location" />
       </div>

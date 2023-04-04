@@ -1,19 +1,35 @@
 import ExploreCard from "../explore-card/explore-card.component";
 import { useState, useEffect, useRef } from "react";
-// import { useSelector, useDispatch } from "react-redux";
 
 import "./selected-filters.styles.scss";
 import RESTAURANT_DATA from "../../RESTAURANT_DATA.json";
+import { useSelector } from "react-redux";
 
 const SelectedFilters = () => {
   const { restuarants } = RESTAURANT_DATA;
-  // const sampleTag = restuarants[0].tags[0].name;
 
   const [isShuffled, setIsShuffled] = useState(false);
 
+  const shuffle = (array) => {
+    const random = Math.floor(Math.random() * array.length);
+    const randomRestuarant = array[random];
+    console.log("SHUFFLED RESTAURANT", randomRestuarant);
+  };
+
   const handleShuffle = () => {
     setIsShuffled(!isShuffled);
+    if (!isShuffled) {
+      shuffle(restuarants);
+    }
   };
+  const selectedCuisines = useSelector(
+    (state) => state.exploreOptions.cuisines
+  );
+
+  useEffect(() => {
+    console.log("UPDATED STATE");
+    console.log("SELECTED_SELECTED_FILTER", selectedCuisines);
+  }, [selectedCuisines]);
 
   const containerRef = useRef(null);
 
