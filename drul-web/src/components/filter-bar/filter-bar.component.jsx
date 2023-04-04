@@ -28,7 +28,6 @@ const FilterBar = () => {
   }, []);
 
   const exploreOptions = useSelector((state) => state.exploreOptions);
-  console.log("SF_STATE_FILTER_BAR", exploreOptions);
 
   return (
     <>
