@@ -1,13 +1,10 @@
-import Map from "../../components/map/map.component";
+import "./home.styles.scss";
 
 const Home = () => {
   return (
-    <>
-      HOME
-      <div>
-        <Map />
-      </div>
-    </>
+    <div className="home-container">
+      <h1>Explore Restaurants In Your Area</h1>
+    </div>
   );
 };
 
