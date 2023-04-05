@@ -134,21 +134,23 @@ const SelectedFilters = () => {
         <li className="selected-filter-category">
           Tags:
           <div className="selected-filters">
-            {selectedTags.map(({ id, name }) => (
-              <Tag
-                key={id}
-                id={id}
-                name={name}
-                clickable={false}
-                removable={true}
-                remove={removeCuisine}
-              />
-            ))}
+            {selectedTags.map(({ id, name }) => {
+              console.log("ST_NAME", name);
+              return (
+                <Tag
+                  key={id}
+                  id={id}
+                  name={name}
+                  clickable={false}
+                  remove={removeCuisine}
+                />
+              );
+            })}
           </div>
         </li>
         <li className="selected-filter-category">Location: </li>
         <li className="search-icon" onClick={handleSearch}>
-          <span className="material-symbols-outlined">search</span>
+          <button>Search</button>
         </li>
         <li
           className={`shuffle-filters ${isShuffled ? "shuffled" : ""}`}

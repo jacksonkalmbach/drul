@@ -18,17 +18,10 @@
 }
 
 .explore-and-selected-filters {
-  padding-top: 0;
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
-
-  // border: transparent;
-  // box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  padding: 20px;
   gap: 20px;
-
   max-height: 70vh;
 }
 
@@ -43,12 +36,12 @@
 .filtered-loctaions-container {
   margin-top: 0px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   width: 60vw;
   gap: 30px;
   overflow-y: scroll;
-  padding: 20px;
+  padding: 5px 20px;
 }
 
 .filtered-loctaions-container > * {
@@ -87,9 +80,9 @@
 .selected-filters-container {
   height: 5vh;
   display: flex;
-  border: transparent;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
+  background-color: #f6f6f6;
+  // box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
   list-style-type: none;
   align-items: center;
   justify-content: space-between;
