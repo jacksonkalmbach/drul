@@ -43,15 +43,6 @@ const FilterBar = () => {
   return (
     <>
       <div className="filter-bar-container">
-        {Object.keys(exploreOptions.exploreOptions.cuisines).length > 0 ||
-        Object.keys(exploreOptions.exploreOptions.locations).length > 0 ||
-        Object.keys(exploreOptions.exploreOptions.tags).length > 0 ? (
-          <button className="clear-filters-btn" onClick={handleClearFilters}>
-            Clear Filters
-          </button>
-        ) : (
-          <button className="clear-filters-btn dormant">Clear Filters</button>
-        )}
         <Accordion
           title="Cuisine"
           filterOptions={cuisines}
@@ -70,6 +61,15 @@ const FilterBar = () => {
           add={addLocation}
           remove={removeLocation}
         />
+        {Object.keys(exploreOptions.exploreOptions.cuisines).length > 0 ||
+        Object.keys(exploreOptions.exploreOptions.locations).length > 0 ||
+        Object.keys(exploreOptions.exploreOptions.tags).length > 0 ? (
+          <button className="clear-filters-btn" onClick={handleClearFilters}>
+            Clear Filters
+          </button>
+        ) : (
+          <button className="clear-filters-btn dormant">Clear Filters</button>
+        )}
       </div>
     </>
   );

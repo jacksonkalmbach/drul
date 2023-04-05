@@ -1,8 +1,77 @@
 @import "../../styles/variables";
 
 .home-container {
-  h1 {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  .landing-page-title {
     font-family: $primary-font;
+    font-size: 60px;
     font-weight: bold;
+  }
+
+  .tagline {
+    font-family: $primary-font;
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+.landing-page-header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 40vw;
+  padding: 0 20px;
+}
+
+.start-search-btn-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.landing-page-img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    .landing-page-title {
+      font-size: 43px;
+    }
+
+    .tagline {
+      font-size: 20px;
+    }
+  }
+
+  .landing-page-header-section {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90vw;
+  }
+
+  .start-search-btn-container {
+    justify-content: center;
+  }
+
+  .landing-page-img {
+    // width: 90vw;
+    // height: auto;
+    display: none;
   }
 }
