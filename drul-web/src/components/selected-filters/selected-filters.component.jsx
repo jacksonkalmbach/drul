@@ -160,7 +160,7 @@ const SelectedFilters = () => {
           <span className="material-symbols-outlined">magic_button</span>
         </li>
       </ul>
-      <div className="filtered-loctaions-container" ref={containerRef}>
+      <div className="filtered-locations-container" ref={containerRef}>
         {searchResults.map((restaurant) => (
           <ExploreCard key={restaurant.id} details={restaurant} />
         ))}

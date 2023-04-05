@@ -1,8 +1,8 @@
 import { signInWithGooglePopup } from "../../utils/firebase.utils";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { login } from "../../store/reducers/users/userAuthSlice";
+import { login, setUid } from "../../store/reducers/users/userAuthSlice";
 
 import "./sign-in.styles.scss";
 
@@ -18,6 +18,7 @@ const SignInForm = () => {
     const user = await signInWithGooglePopup();
     const uid = user.user.uid;
     dispatch(login());
+    dispatch(setUid(uid));
     navigate(`/explore/${uid}`);
   };
 

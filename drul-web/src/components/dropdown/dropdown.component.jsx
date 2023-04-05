@@ -2,25 +2,19 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { signOutUser } from "../../utils/firebase.utils";
-import { logout } from "../../store/reducers/users/userAuthSlice";
+// import { logout } from "../../store/reducers/users/userAuthSlice";
 
-const ProfileDropdown = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-
+const ProfileDropdown = ({ logout, profile, hitlist }) => {
   const handleSignOut = () => {
-    signOutUser();
-    dispatch(logout());
-    navigate("login");
-    console.log("HIT SIGNOUT");
+    logout();
   };
 
   const handleProfile = () => {
-    navigate("profile");
+    profile();
   };
 
   const handleHitlist = () => {
-    navigate("hitlist");
+    hitlist();
   };
 
   return (
